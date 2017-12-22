@@ -1,0 +1,615 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+      <link href='normalize.css' rel="stylesheet">
+      <script src="scrollByAnimated.js"></script>
+      <script src="https://use.typekit.net/fdv0sur.js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+  <style>
+    html, body { font-family: "source-han-serif-korean",serif;
+      font-weight: 200;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    header {width:100%; height:65px; background: rgba(0,0,0,5);position: fixed; z-index:9999;}
+    header #menu {float:right; width:600px;}
+    header #menu li{float:left; width:100px; height: 44px; line-height:44px;text-align: center;color:white;font-size: 0.8em;font-weight:400;cursor:pointer;}
+    header #menu li:hover{background: #FAEB78}
+    
+      .point {
+        height: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .first {
+        background-image: url('./dessert39.jpg');
+      }
+      .second {
+        background color: white;
+        height: 72%;
+      }
+      .third {
+        
+        height: 72%;
+      }
+      .fourth {
+        
+        height: 72%;
+      }
+      .fifth {
+        background-image: url('./dessert39-2.jpg');
+        
+        height: 72%;
+      }
+      .right-heading {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(0%, -50%);
+        color: white;
+        text-align: right;
+      }
+      .right-heading h1, .right-heading h2 {
+        font-weight: 400;
+      }
+      .right-heading h1 {
+        font-size: 4em;
+        font-weight: 500;
+        line-height: 30%;
+      }
+      h3{
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30%;
+        padding-top: 40px;
+      }
+      .band h1 {
+        color: #800080;
+        font-weight: 300;
+        text-align: center;
+        font-size: 40px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+      .sub-caption {
+        background: rgba(233, 211, 242, 0.3);
+        width: 50%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 160%;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(0%, -50%);
+      }
+      .sub-captionleft{
+        background: rgba(233, 211, 242, 0.3);
+        width:720px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 110%;
+        font-weight: 300;
+        margin-top: 25px;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(0%, -50%);
+      }
+      .sub-caption1 {
+        background: rgba(247, 244, 151, 0.5);
+        width: 500px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 110%;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 250px);
+        transform: translate(0%, -50%);
+      }
+      .sub-caption2 {
+        background: rgba(233, 211, 242, 0.3);
+        width: 50%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 160%;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-35%, -50%);
+      }
+      .left {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(0%, -50%);
+      }
+    * {
+                margin: 0;
+                padding: 0;
+            }
+        
+            
+            .content {
+                height: 600px;
+                background-color: red;
+            }
+            .row{ width:100%; margin:auto;position: relative;}
+    
+
+            .logo img
+              { position: absolute;
+                width: 160px;
+                height: auto;
+                padding-left: 30px;
+                margin-top:10px;
+              }
+              .main-nav
+                 {
+                    position: absolute;
+                    right:0px;
+                    padding-right: 30px;
+                    list-style: none;
+                    margin-top: 22px;
+
+                 }
+              .main-nav li
+                  {
+                    display: inline-block;
+                  }
+  .main-nav li a
+  {
+    color:white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+  }
+  .main-nav li.active a
+  {
+    
+  }
+ 
+  
+
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+      display: none;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Caption text */
+  .text {
+    color: #212121;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+
+       #map {
+        height: 400px;
+        width: 600px;
+        margin:auto;
+       }
+  
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: purple;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: black;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    width: 600px;
+    height: 630px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+           
+            footer{width: 50%;height: 100px; background: white ;margin: auto; padding-top: 20px;}
+    footer p{font-size:0.9em;margin-top:10px;margin-bottom: 10px;line-height: 2em;
+    </style>
+    </head>
+
+    <body>
+      <header>
+        <div class="row">
+          <div class="logo">
+            <img src="logo.png">
+          </div>
+          <ul class="main-nav">
+
+            <li><a href=""  id="menuA">HOME</a></li>
+            <li><a href=""  id="menuB">SERVICES</a></li>
+            <li><a href="" id="menuC">ABOUT</a></li>
+            <li><a href="" id="menuD">CONTACT</a></li>
+            <li><a href="" id="menuE">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
+    </header>
+    <div class="point first">
+      <div class="right-heading">
+        <h1>DESSERT39</h1>
+        <h3>PREMIUM BOUTIQUE</h3>
+      </div>
+    </div>
+    <div class="band">
+      <h1>THE WORLD DESSERT CAFE - DESSERT.39</h1>
+    </div>
+    
+    <div class="point second">
+      <div class="sub-caption1">
+        <div class="caption-text">
+          <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="cake.jpg" style="width:100%">
+    <div class="text">Tokyo roll</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="cake2.jpg" style="width:100%">
+    <div class="text">Cake1</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="cake3.jpg" style="width:100%">
+    <div class="text">Cake2</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+          세계 각 국을 대표하는 39가지의 인기 수제디저트를 한 공간에서 즐길 수 있는 프리미엄 디저트 부띠끄입니다.
+        </div>
+      </div>
+    </div>
+    <div class="band">
+      <h1>Bakery&Coffee</h1>
+    </div>
+    <div class="point third">
+      <div class="sub-captionleft">
+        <div class="caption-text">
+<video controls autoplay>
+  <source src="chocolate2.mp4" type="video/mp4">
+  <source src="chocolate2.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+ 
+          We supply only the best quality dessert for you.
+        </div>
+      </div>
+    </div>
+    
+      
+    <div class="point fourth">
+      <div class="sub-caption">
+        <div class="caption-text">
+
+          A place where you can find world's finest dessert and freshest coffee.
+            
+        </div>         
+          </div>
+        </div>
+
+
+
+
+    <div class="band">
+      <h1>디저트39</h1>
+    </div>
+    <div class="point fifth">
+      <div class="sub-caption">
+        <div class="caption-text">
+          Blend products which include our expertly aged Sumatran beans is specially roasted to bring out their depth and vibrance.
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="band">
+      <h1>Bakery&Coffee</h1>
+    </div>
+    <div class="point third">
+      <div class="sub-captionleft">
+        <div class="caption-text">
+
+ 
+</div>
+
+<div class="section" id="sectionA">
+
+  <video src="dessert39movie.mp4" controls="controls" type="video/mp4"></video> 
+ 
+</div>
+
+         </div>
+      </div>
+    </div>
+    
+      
+    <div class="point fourth">
+      <div class="sub-caption">
+        <div class="caption-text">
+
+          Our coffee masters have distilled their years of tasting knowledge down to three simple questions to help you find a Dessert39 coffee you're sure to love.
+            
+        </div>         
+          </div>
+        </div>
+        <div class="band">
+      <h1>찾아오시는길</h1>
+    </div>
+
+     <div id="map">
+     </div>
+          <br>
+          <br>
+<div class="band">
+      <h1>FAQ</h1>
+    </div>
+      <div class="container">
+  <form action="/action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">South korea</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+
+   
+    <footer>
+         <br>
+           <hr width="100%">
+            <p><span class="bold">Dessert39 in anseong</span>_2015286009 김소담
+           <br>2017 all rights reserved.</p>
+    </footer>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cEQJfGexiLnfA2rap6KUmasM7Ug9tps&callback=initMap"
+  async defer>
+</script>
+
+    
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+         showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+ function initMap() {
+        var uluru = {lat: 37.010117, lng: 127.260841};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+
+
+  window.onscroll = function(){
+    console.log(window.pageYOffset);
+    var scrollH = window.pageYOffset;
+    if(scrollH > 0 && scrollH < 690){
+        menuA.style.background = "purple";
+    }else{
+        menuA.style.background = "none";
+
+    }
+
+    if(scrollH > 690 && scrollH < 1300){
+        menuB.style.background = "purple";
+    }else{
+        menuB.style.background = "none";
+
+    }
+
+    if(scrollH > 1300 && scrollH < 4276){
+        menuC.style.background = "purple";
+    }else{
+        menuC.style.background = "none";
+
+    }
+    if(scrollH > 4276 && scrollH < 4900){
+        menuD.style.background = "purple";
+    }else{
+        menuD.style.background = "none";
+
+    }
+      
+   if(scrollH > 4900 && scrollH < 5500){
+        menuE.style.background = "purple";
+    }else{
+        menuE.style.background = "none";
+
+    }
+
+  }
+    </script>
+  </body>
+</html>
